@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/9a0d6f3704.js" crossorigin="anonymous"></script>
+    <title>La palette du goût</title>
+</head>
+
+<body>
+    <header>
+        <i class="fa-solid fa-arrow-left"></i>
+        <img src="assets/logos/logo.png" alt="Logo de Ohmyfood">
+    </header>
+
+    <main>
+        <!-- banner -->
+        <div>
+            <img src="N_Y88TWmGwA" alt="Asiette de poisson et roquette">
+        </div>
+
+        <!-- menu -->
+        <section>
+            <header>
+                <h1>La palette du goût</h1>
+                <i class="fa-regular fa-heart"></i>
+            </header>
+            <form></form>
+        </section>
+    </main>
+
+    <footer>
+        <footer>
+            <nav>
+                <h3>ohmyfood</h3>
+                <ul>
+                    <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
+                    <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
+                    <li>Mentions légales</li>
+                    <li><a href="mailto: contact@homyfood.com">Contact</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </footer>
+</body>
