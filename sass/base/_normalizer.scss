@@ -15,6 +15,8 @@ h5,
 h6,
 p,
 a,
+fieldset,
+legend,
 figure,
 blockquote,
 dl,
@@ -69,4 +71,8 @@ select {
 /* Font-size html relatif avec valeur de base 1rem=10px */
 html {
     font-size: 62.5%;
+}
+
+fieldset {
+    border: none;
 }

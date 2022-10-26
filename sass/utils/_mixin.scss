@@ -17,6 +17,6 @@
 }
 
 @mixin guideline_text {
-    font-size: 1.6rem;
+    font-size: min(1.6rem, 6.4vw);
     font-weight: 500;
 }

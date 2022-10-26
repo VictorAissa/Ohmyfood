@@ -1,0 +1,88 @@
+.menu header {
+  width: 100%;
+  height: 370px;
+}
+.menu header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu header .menu_banner {
+  height: 25%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  top: -50px;
+  background-color: #f6f6f6;
+}
+.menu header .menu_banner h2 {
+  font-family: shrikhand, sans-serif;
+  font-size: min(2.8rem, 9.3vw);
+  font-weight: 400;
+}
+
+.dish {
+  width: 100%;
+  height: 70px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1882352941);
+  display: flex;
+  position: relative;
+  padding: 0 10px;
+}
+.dish input {
+  display: none;
+}
+.dish label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+.dish label .dish_title {
+  font-size: min(1.8rem, 6vw);
+  font-weight: 500;
+}
+.dish label .dish_description {
+  font-size: min(1.5rem, 5vw);
+  font-weight: 300;
+}
+.dish label .dish_price {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  font-size: min(1.5rem, 5vw);
+  font-weight: 700;
+  color: #353535;
+}
+
+.menu {
+  background-color: #f6f6f6;
+}
+
+form {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form fieldset {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+form fieldset legend {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+form button {
+  width: 180px;
+  margin-top: 40px;
+}
+
+/*# sourceMappingURL=page_1.css.map */

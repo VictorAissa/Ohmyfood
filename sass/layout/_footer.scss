@@ -1,0 +1,25 @@
+body > footer {
+    padding: 25px;
+    background-color: $colour_background_footer;
+    color: #ffffff;
+    h3 {
+        font-family: shrikhand, sans-serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 1.6rem;
+        font-weight: 400;
+        i {
+            font-size: small;
+            width: 30px;
+        }
+        a {
+            color: #ffffff;
+        }
+    }
+}
