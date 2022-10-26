@@ -4,8 +4,16 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "sass": "sass --watch css/sass/main.scss:css/style.css"
+        "sass": "sass --watch ./sass:./public/css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/VictorAissa/Ohmyfood.git"
     },
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/VictorAissa/Ohmyfood/issues"
+    },
+    "homepage": "https://github.com/VictorAissa/Ohmyfood#readme"
 }

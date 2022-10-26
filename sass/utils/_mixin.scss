@@ -1,0 +1,22 @@
+@mixin button_color {
+    background: linear-gradient(
+        to left top,
+        $colour_primary,
+        $colour_secondary
+    );
+}
+
+@mixin button_font {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+@mixin section_padding {
+    padding: 40px 20px;
+}
+
+@mixin guideline_text {
+    font-size: 1.6rem;
+    font-weight: 500;
+}

@@ -1,0 +1,11 @@
+.functionning {
+    @include section_padding;
+    h2 {
+        margin-bottom: 20px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
