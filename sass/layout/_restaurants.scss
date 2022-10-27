@@ -1,7 +1,7 @@
 .restaurants {
     @include section_padding;
-    background-color: $colour_background;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    background-color: $colour_background;
 }

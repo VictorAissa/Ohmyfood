@@ -1,3 +1,5 @@
+/* homepage fonts */
+/* restaurant page fonts */
 /* Box sizing rules */
 *,
 *::before,
@@ -73,6 +75,7 @@ html {
   font-size: 62.5%;
 }
 
+/*Pas de mise en page automatique des formulaires*/
 fieldset {
   border: none;
 }
@@ -120,11 +123,11 @@ body > header i {
 }
 .cta .cta_content {
   padding: 40px 30px;
-  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  background-color: #f6f6f6;
 }
 .cta .cta_content h2 {
   padding: 0px 15px;
@@ -148,10 +151,10 @@ body > header i {
 
 .restaurants {
   padding: 40px 20px;
-  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background-color: #f6f6f6;
 }
 
 body > footer {
@@ -184,17 +187,20 @@ button {
   height: 50px;
   border-radius: 25px;
   border: none;
-  background: linear-gradient(to left top, #9356dc, #ff79da);
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1882352941);
+  background: linear-gradient(to left top, #9356dc, #ff79da);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1882352941);
+}
+button:hover {
+  background: linear-gradient(to left top, #9b63df, #ff88de);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1882352941);
 }
 
 .cta_location {
   height: 50px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #eaeaea;
@@ -208,8 +214,8 @@ button {
 .cta_location input {
   width: 150px;
   padding-left: 10px;
-  background-color: #eaeaea;
   border: none;
+  background-color: #eaeaea;
   color: #353535;
   font-size: 1.6rem;
   font-weight: 500;
@@ -220,25 +226,42 @@ button {
   width: 100%;
   border-radius: 20px;
   background-color: #f6f6f6;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1882352941);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1882352941);
   display: flex;
   align-items: center;
   padding: 0 40px;
   font-size: min(1.6rem, 6.4vw);
   font-weight: 500;
+  position: relative;
 }
 .functionning li i {
   color: #7e7e7e;
-  font-size: 20px;
   width: 25px;
+  font-size: 2rem;
   margin-right: 15px;
+}
+.functionning li::before {
+  content: "1";
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  left: -12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9356dc;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .restaurant_card {
   width: 100%;
   height: 65vw;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1882352941);
   border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1882352941);
+  position: relative;
 }
 .restaurant_card img {
   height: 65%;
@@ -251,8 +274,8 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 5%;
   gap: 10%;
+  padding: 0 5%;
   background-color: #ffffff;
   position: relative;
 }
@@ -271,6 +294,22 @@ button {
   top: 30%;
   right: 10%;
   font-size: 5.6vw;
+}
+.restaurant_card::after {
+  content: "Nouveau";
+  width: 21vw;
+  height: 7.7vw;
+  border-radius: 0.8vw;
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 3.7vw;
+  background-color: #99e2d0;
+  color: #008766;
 }
 
 /*# sourceMappingURL=main.css.map */

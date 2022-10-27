@@ -7,27 +7,24 @@
     display: flex;
     position: relative;
     padding: 0 10px;
-    input {
-        display: none;
-        &:checked + .checked_box {
-            display: flex;
-        }
-    }
     label {
-        width: 100%;
+        width: 80%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 2px;
-        &:checked {
-            background-color: aqua;
-        }
         .dish_title {
             @include dish_title_font;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         .dish_description {
             @include dish_description_font;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         .dish_price {
             position: absolute;
@@ -36,26 +33,31 @@
             @include dish_price_font;
         }
     }
+    input {
+        display: none;
+        &:checked + .checked_box {
+            display: flex;
+        }
+    }
     .checked_box {
-        position: absolute;
-        top: 0;
-        right: 0;
         height: 100%;
         width: 60px;
         border-radius: 0 15px 15px 0;
+        position: absolute;
+        right: 0;
         background-color: $colour_tertiary;
         display: none;
         justify-content: center;
         align-items: center;
         i {
-            color: $colour_tertiary;
-            background-color: #ffffff;
             width: 20px;
             height: 20px;
-            font-size: 15px;
             border-radius: 50%;
+            font-size: 15px;
             line-height: 20px;
             text-align: center;
+            color: $colour_tertiary;
+            background-color: #ffffff;
         }
     }
 }

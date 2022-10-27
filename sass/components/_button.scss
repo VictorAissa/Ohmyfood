@@ -3,7 +3,11 @@ button {
     // width: auto;
     border-radius: 25px;
     border: none;
-    @include button_color;
     @include button_font;
+    @include button_color;
     @include shadow;
+    &:hover {
+        @include button_color_enlighted;
+        @include shadow_extended;
+    }
 }

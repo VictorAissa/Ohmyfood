@@ -1,7 +1,6 @@
 .cta_location {
     height: 50px;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: $colour_background_location;
@@ -14,8 +13,8 @@
     input {
         width: 150px;
         padding-left: 10px;
-        background-color: $colour_background_location;
         border: none;
+        background-color: $colour_background_location;
         color: $colour_font_secondary;
         font-size: 1.6rem;
         font-weight: 500;
