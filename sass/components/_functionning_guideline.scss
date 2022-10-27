@@ -3,7 +3,7 @@
     width: 100%;
     border-radius: 20px;
     background-color: $colour_background;
-    box-shadow: 0px 3px 10px #00000030;
+    @include shadow;
     display: flex;
     align-items: center;
     padding: 0 40px;

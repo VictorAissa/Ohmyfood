@@ -101,7 +101,7 @@ body > header {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 8px rgba(62, 62, 62, 0.3137254902);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1254901961);
   position: relative;
 }
 body > header a {
