@@ -104,7 +104,6 @@ body > header {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1254901961);
   position: relative;
 }
 body > header a {
@@ -147,6 +146,7 @@ body > header i {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  counter-set: guideline_counter;
 }
 
 .restaurants {
@@ -203,8 +203,7 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #eaeaea;
-  z-index: -1;
+  background: linear-gradient(rgba(80, 80, 80, 0.2509803922), #eaeaea 10%);
 }
 .cta_location i {
   width: 25px;
@@ -215,7 +214,7 @@ button:hover {
   width: 150px;
   padding-left: 10px;
   border: none;
-  background-color: #eaeaea;
+  background-color: transparent;
   color: #353535;
   font-size: 1.6rem;
   font-weight: 500;
@@ -234,6 +233,12 @@ button:hover {
   font-weight: 500;
   position: relative;
 }
+.functionning li:nth-child(3) {
+  background-color: #f5edff;
+}
+.functionning li:nth-child(3) i {
+  color: #9356dc;
+}
 .functionning li i {
   color: #7e7e7e;
   width: 25px;
@@ -241,12 +246,15 @@ button:hover {
   margin-right: 15px;
 }
 .functionning li::before {
-  content: "1";
+  content: counter(guideline_counter);
+  counter-increment: guideline_counter;
   width: 24px;
   height: 24px;
   border-radius: 50%;
   position: absolute;
-  left: -12px;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
   align-items: center;

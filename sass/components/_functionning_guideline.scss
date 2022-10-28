@@ -9,6 +9,12 @@
     padding: 0 40px;
     @include guideline_font;
     position: relative;
+    &:nth-child(3) {
+        background-color: #f5edff;
+        i {
+            color: $colour_primary;
+        }
+    }
     i {
         color: $colour_icon;
         width: 25px;
@@ -16,12 +22,15 @@
         margin-right: 15px;
     }
     &::before {
-        content: "1";
+        content: counter(guideline_counter);
+        counter-increment: guideline_counter;
         width: 24px;
         height: 24px;
         border-radius: 50%;
         position: absolute;
-        left: -12px;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
         display: flex;
         justify-content: center;
         align-items: center;

@@ -5,15 +5,21 @@
     background-color: #ffffff;
     @include shadow;
     display: flex;
+    justify-content: space-between;
     position: relative;
-    padding: 0 10px;
     label {
-        width: 80%;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 0 10px;
         gap: 2px;
+        // position: relative;
+        // white-space: nowrap;
+        // text-overflow: ellipsis;
+        // overflow: hidden;
+
         .dish_title {
             @include dish_title_font;
             white-space: nowrap;
@@ -26,38 +32,51 @@
             text-overflow: ellipsis;
             overflow: hidden;
         }
-        .dish_price {
-            position: absolute;
-            right: 20px;
-            bottom: 10px;
-            @include dish_price_font;
-        }
+    }
+    .dish_price {
+        @include dish_price_font;
+        display: flex;
+        align-items: flex-end;
+        padding: 0 10px 12px 0;
     }
     input {
         display: none;
-        &:checked + .checked_box {
+        &:checked + i {
             display: flex;
         }
     }
-    .checked_box {
+    i {
         height: 100%;
         width: 60px;
         border-radius: 0 15px 15px 0;
-        position: absolute;
-        right: 0;
+        // position: absolute;
+        // right: 0;
         background-color: $colour_tertiary;
         display: none;
         justify-content: center;
         align-items: center;
-        i {
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            font-size: 15px;
-            line-height: 20px;
-            text-align: center;
-            color: $colour_tertiary;
-            background-color: #ffffff;
-        }
+        font-size: 22px;
+        color: #ffffff;
     }
+    // .checked_box {
+    //     height: 100%;
+    //     width: 60px;
+    //     border-radius: 0 15px 15px 0;
+    //     position: absolute;
+    //     right: 0;
+    //     background-color: $colour_tertiary;
+    //     display: none;
+    //     justify-content: center;
+    //     align-items: center;
+    //     i {
+    //         width: 20px;
+    //         height: 20px;
+    //         border-radius: 50%;
+    //         font-size: 15px;
+    //         line-height: 20px;
+    //         text-align: center;
+    //         color: $colour_tertiary;
+    //         background-color: #ffffff;
+    //     }
+    // }
 }
