@@ -5,14 +5,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        fieldset {
+        .course {
             width: 100%;
             display: flex;
             flex-direction: column;
             gap: 10px;
-
-            legend {
+            .course_title {
                 height: 25px;
                 @include menu_fieldset_legend_font;
                 margin-bottom: 18px;

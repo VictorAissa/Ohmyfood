@@ -87,7 +87,7 @@
 }
 
 @mixin dish_price_font {
-    font-size: min(1.5rem, 5vw);
+    font-size: 1.5rem;
     font-weight: 700;
     color: $colour_font_secondary;
 }

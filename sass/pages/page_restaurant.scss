@@ -1,7 +1,13 @@
 @import "../utils/variables";
 @import "../utils/mixin";
 
+@import "../base/normalizer";
+@import "../base/typography";
+
+@import "../components/button";
 @import "../components/menu_header";
 @import "../components/dish";
 
+@import "../layout/header";
 @import "../layout/_menu";
+@import "../layout/footer";
