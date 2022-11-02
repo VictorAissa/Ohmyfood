@@ -5,12 +5,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 35px;
         .course {
             width: 100%;
             display: flex;
             flex-direction: column;
             gap: 10px;
-            .course_title {
+            animation: fade-in-top 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+            h3 {
                 height: 25px;
                 @include menu_fieldset_legend_font;
                 margin-bottom: 18px;
@@ -22,6 +24,15 @@
                     background-color: $colour_tertiary;
                 }
             }
+        }
+        .course_delay_1 {
+            animation-delay: 0.1s;
+        }
+        .course_delay_2 {
+            animation-delay: 0.7s;
+        }
+        .course_delay_3 {
+            animation-delay: 1.3s;
         }
         button {
             width: 180px;

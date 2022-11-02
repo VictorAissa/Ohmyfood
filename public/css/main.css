@@ -153,6 +153,7 @@ body > header i {
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   background-color: #f6f6f6;
 }
@@ -281,19 +282,26 @@ button:hover::after {
   font-weight: 500;
 }
 
-.restaurant_card {
+.restaurants a {
   width: 100%;
+  max-width: 410px;
   height: 65vw;
+  max-height: 292px;
   border-radius: 15px;
+  overflow: hidden;
+}
+.restaurants a .restaurant_card {
+  width: 100%;
+  height: 100%;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1882352941);
   position: relative;
 }
-.restaurant_card img {
+.restaurants a .restaurant_card img {
   height: 65%;
   border-radius: 15px 15px 0 0;
   object-fit: cover;
 }
-.restaurant_card figcaption {
+.restaurants a .restaurant_card figcaption {
   height: 35%;
   border-radius: 0 0 15px 15px;
   display: flex;
@@ -304,27 +312,23 @@ button:hover::after {
   background-color: #ffffff;
   position: relative;
 }
-.restaurant_card figcaption h3 {
-  font-size: 4.8vw;
-  line-height: 5.3vw;
+.restaurants a .restaurant_card figcaption h3 {
+  font-size: min(21px, 4.8vw);
+  line-height: min(24px, 5.3vw);
   font-weight: 700;
 }
-.restaurant_card figcaption p {
-  font-size: 4.5vw;
-  line-height: 5.3vw;
+.restaurants a .restaurant_card figcaption p {
+  font-size: min(20px, 4.5vw);
+  line-height: min(24px, 5.3vw);
   font-weight: 300;
 }
-.restaurant_card figcaption i {
-  position: absolute;
-  top: 30%;
-  right: 10%;
-  font-size: 5.6vw;
-}
-.restaurant_card::after {
+.restaurants a .restaurant_card::after {
   content: "Nouveau";
   width: 21vw;
+  max-width: 94px;
   height: 7.7vw;
-  border-radius: 0.8vw;
+  max-height: 34px;
+  border-radius: min(4px, 0.8vw);
   position: absolute;
   top: 4%;
   right: 3%;
@@ -332,9 +336,30 @@ button:hover::after {
   justify-content: center;
   align-items: center;
   font-weight: 500;
-  font-size: 3.7vw;
+  font-size: min(16px, 3.7vw);
   background-color: #99e2d0;
   color: #008766;
+}
+
+.restaurant_card i {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  font-size: min(25px, 5.6vw);
+}
+.restaurant_card .empty_heart:hover + .full_heart {
+  opacity: 1;
+}
+.restaurant_card .full_heart {
+  background: linear-gradient(to left top, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform-origin: bottom;
+  transition-duration: 0.8s;
+}
+.restaurant_card .full_heart:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=main.css.map */
