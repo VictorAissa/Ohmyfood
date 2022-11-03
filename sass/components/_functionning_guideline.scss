@@ -1,6 +1,7 @@
 .functionning li {
     height: 72px;
     width: 100%;
+    max-width: 325px;
     border-radius: 20px;
     background-color: $colour_background;
     @include shadow;
@@ -24,8 +25,8 @@
     &::before {
         content: counter(guideline_counter);
         counter-increment: guideline_counter;
-        width: 24px;
-        height: 24px;
+        width: 2.4rem;
+        height: 2.4rem;
         border-radius: 50%;
         position: absolute;
         top: 50%;
@@ -36,7 +37,7 @@
         align-items: center;
         background-color: $colour_primary;
         color: #ffffff;
-        font-size: 14px;
+        font-size: 1.4rem;
         font-weight: 500;
     }
 }

@@ -1,12 +1,18 @@
 .functionning {
     @include section_padding;
     h2 {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     ul {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 15px;
         counter-set: guideline_counter;
+        @media screen and (min-width: 800px) {
+            flex-direction: row;
+            justify-content: center;
+            gap: 30px;
+        }
     }
 }

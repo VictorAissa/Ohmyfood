@@ -8,3 +8,15 @@
         opacity: 1;
     }
 }
+
+@keyframes loader_background {
+    0% {
+        background-position: left;
+    }
+    50% {
+        background-position: right;
+    }
+    100% {
+        background-position: left;
+    }
+}

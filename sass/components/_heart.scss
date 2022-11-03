@@ -1,23 +1,23 @@
 .restaurant_card {
     i {
         position: absolute;
-        top: 30%;
+        top: 20%;
         right: 10%;
-        font-size: min(25px, 5.6vw);
-    }
-    .empty_heart {
-        &:hover + .full_heart {
-            opacity: 1;
-        }
+        font-size: min(calc($max_device_width * 7 / 100), 7vw);
     }
     .full_heart {
         @include button_color;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         opacity: 0;
-        transform-origin: bottom;
-        transition-duration: 0.8s;
+        transition: opacity 0.8s;
         &:hover {
+            opacity: 1;
+        }
+    }
+    input {
+        display: none;
+        &:checked ~ label > .full_heart {
             opacity: 1;
         }
     }

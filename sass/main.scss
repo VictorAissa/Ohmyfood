@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/mixin";
+@import "./utils/animations";
 
 @import "./base/normalizer";
 @import "./base/typography";
@@ -10,6 +11,7 @@
 @import "./layout/restaurants";
 @import "./layout/footer";
 
+@import "./components/loader";
 @import "./components/button";
 @import "./components/location";
 @import "./components/functionning_guideline";
