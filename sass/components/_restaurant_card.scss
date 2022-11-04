@@ -34,7 +34,7 @@
             @include card_p_font;
         }
     }
-    &::after {
+    &.flag_new::after {
         content: "Nouveau";
         width: min(calc($max_device_width * 21 / 100), 21vw);
         height: min(calc($max_device_width * 7.7 / 100), 7.7vw);
@@ -49,5 +49,10 @@
         font-weight: 500;
         background-color: $colour_tertiary;
         color: $colour_tertiary_font;
+    }
+    @media screen and (min-width: 1400px) {
+        &.hidden_card_desktop {
+            display: none;
+        }
     }
 }

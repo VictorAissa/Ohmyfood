@@ -20,3 +20,14 @@
         background-position: left;
     }
 }
+
+@keyframes loader_disappear {
+    from {
+        opacity: 1;
+        z-index: 10;
+    }
+    to {
+        opacity: 0;
+        z-index: 0;
+    }
+}

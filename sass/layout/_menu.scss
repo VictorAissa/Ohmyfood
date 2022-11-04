@@ -1,42 +1,81 @@
-.menu {
-    background-color: $colour_background;
-    form {
-        @include section_padding;
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+        max-height: 400px;
+        object-fit: cover;
+    }
+    .menu {
+        width: min(1000px, 100%);
+        background-color: $colour_background;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 35px;
-        .course {
-            width: 100%;
+        header {
+            width: min(1000px, 100%);
+            border-radius: 40px 40px 0 0;
+            transform: translateY(-50px);
+            padding: 40px $mobile_section_side_padding 0
+                $mobile_section_side_padding;
+            background-color: $colour_background;
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            animation: fade-in-top 0.5s ease-out backwards;
-            h3 {
-                height: 25px;
-                @include menu_h3_font;
-                margin-bottom: 18px;
-                &::after {
-                    content: "";
-                    width: 40px;
-                    height: 3px;
-                    display: block;
-                    background-color: $colour_tertiary;
-                }
+            justify-content: space-between;
+            align-items: center;
+            h2 {
+                @include menu_h2_font;
+            }
+            i {
+                font-size: 28px;
+                margin: 0 5%;
+            }
+            @media screen and (min-width: 750px) {
+                justify-content: center;
+                height: 70px;
+                transform: translateY(-50px);
             }
         }
-        .course_delay_1 {
-            animation-delay: 0.1s;
-        }
-        .course_delay_2 {
-            animation-delay: 0.7s;
-        }
-        .course_delay_3 {
-            animation-delay: 1.3s;
-        }
-        button {
-            width: 180px;
-            margin-top: 40px;
+
+        form {
+            width: min(750px, 100%);
+            transform: translateY(-20px);
+            padding: 0 $mobile_section_side_padding 20px
+                $mobile_section_side_padding;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            .course {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                animation: fade-in-top 0.5s ease-out backwards;
+                h3 {
+                    height: 25px;
+                    @include menu_h3_font;
+                    margin-bottom: 18px;
+                    &::after {
+                        content: "";
+                        width: 40px;
+                        height: 3px;
+                        display: block;
+                        background-color: $colour_tertiary;
+                    }
+                }
+            }
+            .course_delay_1 {
+                animation-delay: 0.1s;
+            }
+            .course_delay_2 {
+                animation-delay: 0.7s;
+            }
+            .course_delay_3 {
+                animation-delay: 1.3s;
+            }
+            button {
+                width: 180px;
+            }
         }
     }
 }

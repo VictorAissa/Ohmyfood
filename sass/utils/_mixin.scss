@@ -1,7 +1,5 @@
 @mixin section_padding {
     padding: 45px $mobile_section_side_padding;
-    @media screen and (min-width: 600px) {
-    }
 }
 
 @mixin shadow {

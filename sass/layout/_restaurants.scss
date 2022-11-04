@@ -11,12 +11,17 @@
     }
     @media screen and (min-width: 750px) {
         display: grid;
-        grid-template: 40px repeat(2, auto) / repeat(2, auto);
+        justify-content: center;
+        grid-template: 40px repeat(2, 1fr) / repeat(2, minmax(0, 380px));
         h2 {
             grid-area: 1 / 1 / 2 / 3;
         }
-        .restaurant_card {
-            justify-self: center;
+    }
+    @media screen and (min-width: 1400px) {
+        grid-template: 40px 1fr / repeat(3, 380px);
+        padding: 45px 0 45px 190px;
+        h2 {
+            grid-area: 1 / 1 / 2 / 5;
         }
     }
 }
