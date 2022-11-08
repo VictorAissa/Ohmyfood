@@ -393,6 +393,7 @@ body > header i {
   .functionning {
     display: grid;
     grid-template: repeat(2, auto)/minmax(0, 1020px);
+    justify-content: center;
   }
   .functionning ul {
     flex-direction: row;
