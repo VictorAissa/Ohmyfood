@@ -12,8 +12,7 @@
     }
     @media screen and (min-width: 750px) {
         display: grid;
-        grid-template-columns: minmax(0, 1020px);
-        justify-content: center;
+        grid-template: repeat(2, auto) / minmax(0, 1020px);
         ul {
             flex-direction: row;
             gap: 30px;

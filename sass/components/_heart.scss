@@ -1,9 +1,10 @@
 .restaurant_card {
     i {
         position: absolute;
-        top: 20%;
-        right: 10%;
+        bottom: 12%;
+        right: 8%;
         font-size: min(calc($max_device_width * 7 / 100), 7vw);
+        cursor: pointer;
     }
     .full_heart {
         @include button_color;

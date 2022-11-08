@@ -1,7 +1,7 @@
-/*restaurant_card dimensions limitation in function of device width*/
+/*reference display width for max relatives dimensions*/
 /* homepage fonts */
 /* restaurant page fonts */
-@keyframes fade-in-top {
+@keyframes fade_in_top {
   0% {
     transform: translateY(-50px);
     opacity: 0;
@@ -141,7 +141,7 @@ button {
   color: #ffffff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1882352941);
   position: relative;
-  z-index: 1;
+  z-index: 0;
   cursor: pointer;
 }
 button::after {
@@ -154,8 +154,8 @@ button::after {
   border-radius: 25px;
   background: linear-gradient(to left top, #9b63df, #ff88de);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1882352941);
-  opacity: 0;
   z-index: -1;
+  opacity: 0;
   transition-duration: 0.3s;
 }
 button:hover::after {
@@ -171,24 +171,7 @@ button:hover::after {
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  animation: fade-in-top 0.5s cubic-bezier(0.4, 0.6, 0.6, 1) both;
-  /*.checked_box {
-     height: 100%;
-     width: 80px;
-     background-color: $colour_tertiary;
-     justify-content: center;
-     align-items: center;
-     i {
-         width: 20px;
-         height: 20px;
-         border-radius: 50%;
-         font-size: 15px;
-         line-height: 20px;
-         text-align: center;
-         color: $colour_tertiary;
-         background-color: #ffffff;
-      }
-  }*/
+  animation: fade_in_top 0.5s cubic-bezier(0.4, 0.6, 0.6, 1) both;
 }
 .dish_delay_1 {
   animation-delay: 0.2s;
@@ -216,6 +199,9 @@ button:hover::after {
 }
 .dish_delay_9 {
   animation-delay: 1.8s;
+}
+.dish_delay_10 {
+  animation-delay: 2s;
 }
 .dish label {
   width: 100%;
@@ -264,7 +250,7 @@ button:hover::after {
   justify-content: center;
   align-items: center;
   font-size: 22px;
-  color: #ffffff;
+  color: #fff;
   margin: 0 -80px 0 20px;
   transition: margin 0.6s;
 }
@@ -328,7 +314,7 @@ main .menu header i {
   }
 }
 main .menu form {
-  width: min(750px, 100%);
+  width: min(650px, 100%);
   transform: translateY(-20px);
   padding: 0 20px 20px 20px;
   display: flex;
@@ -341,7 +327,7 @@ main .menu form .course {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  animation: fade-in-top 0.5s ease-out backwards;
+  animation: fade_in_top 0.5s ease-out backwards;
 }
 main .menu form .course h3 {
   height: 25px;
@@ -361,10 +347,10 @@ main .menu form .course_delay_1 {
   animation-delay: 0.1s;
 }
 main .menu form .course_delay_2 {
-  animation-delay: 0.7s;
+  animation-delay: 0.8s;
 }
 main .menu form .course_delay_3 {
-  animation-delay: 1.3s;
+  animation-delay: 1.4s;
 }
 main .menu form button {
   width: 180px;
@@ -373,7 +359,7 @@ main .menu form button {
 body > footer nav {
   padding: 25px;
   background-color: #353535;
-  color: #ffffff;
+  color: #fff;
 }
 body > footer nav h3 {
   font-family: shrikhand, sans-serif;
@@ -427,6 +413,7 @@ body > footer nav ul a {
   }
   body > footer nav h3 {
     padding: 15px 30px;
+    margin: 0;
   }
   body > footer nav ul {
     display: flex;

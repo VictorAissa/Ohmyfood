@@ -1,15 +1,9 @@
-@import "./utils/variables";
 @import "./utils/mixin";
+@import "./utils/variables";
 @import "./utils/animations";
 
 @import "./base/normalizer";
 @import "./base/typography";
-
-@import "./layout/header";
-@import "./layout/cta";
-@import "./layout/functionning";
-@import "./layout/restaurants";
-@import "./layout/footer";
 
 @import "./components/loader";
 @import "./components/button";
@@ -17,3 +11,9 @@
 @import "./components/functionning_guideline";
 @import "./components/restaurant_card";
 @import "./components/heart";
+
+@import "./layout/header";
+@import "./layout/cta";
+@import "./layout/functionning";
+@import "./layout/restaurants";
+@import "./layout/footer";

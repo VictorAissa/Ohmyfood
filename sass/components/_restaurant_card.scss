@@ -1,4 +1,4 @@
-.restaurant_card {
+.restaurants a {
     width: 100%;
     max-width: calc($max_device_width - $mobile_section_side_padding);
     height: 65vw;
@@ -8,51 +8,52 @@
     border-radius: 15px;
     overflow: hidden;
     @include shadow;
-    position: relative;
-    a {
+
+    .restaurant_card {
         width: 100%;
         height: 100%;
-    }
-    img {
-        height: 65%;
-        object-fit: cover;
-    }
-    figcaption {
-        width: 100%;
-        height: 35%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 10%;
-        padding: 0 5%;
-        background-color: #ffffff;
         position: relative;
-        h3 {
-            @include card_h3_font;
+        img {
+            height: 70%;
+            object-fit: cover;
         }
-        p {
-            @include card_p_font;
+        figcaption {
+            width: 100%;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5%;
+            padding: 5%;
+            background-color: #fff;
+            position: relative;
+            h3 {
+                @include card_h3_font;
+            }
+            p {
+                @include card_p_font;
+            }
         }
-    }
-    &.flag_new::after {
-        content: "Nouveau";
-        width: min(calc($max_device_width * 21 / 100), 21vw);
-        height: min(calc($max_device_width * 7.7 / 100), 7.7vw);
-        border-radius: min(calc($max_device_width * 0.8 / 100), 0.8vw);
-        position: absolute;
-        top: 4%;
-        right: 3%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: min(16px, 3.7vw);
-        font-weight: 500;
-        background-color: $colour_tertiary;
-        color: $colour_tertiary_font;
-    }
-    @media screen and (min-width: 1400px) {
-        &.hidden_card_desktop {
-            display: none;
+        &.flag_new::after {
+            content: "Nouveau";
+            width: min(calc($max_device_width * 21 / 100), 21vw);
+            height: min(calc($max_device_width * 7.7 / 100), 7.7vw);
+            border-radius: min(calc($max_device_width * 0.8 / 100), 0.8vw);
+            position: absolute;
+            top: 4%;
+            right: 3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: min(16px, 3.7vw);
+            font-weight: 500;
+            background-color: $colour_tertiary;
+            color: $colour_tertiary_font;
+        }
+        @media screen and (min-width: 1400px) {
+            &.hidden_card_desktop {
+                display: none;
+            }
         }
     }
 }

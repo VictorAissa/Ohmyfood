@@ -1,7 +1,7 @@
 body > footer nav {
     padding: 25px;
     background-color: $colour_background_footer;
-    color: #ffffff;
+    color: #fff;
     h3 {
         @include footer_h3_font;
         margin-bottom: 15px;
@@ -46,6 +46,7 @@ body > footer nav {
         flex-direction: row-reverse;
         h3 {
             padding: 15px 30px;
+            margin: 0;
         }
         ul {
             display: flex;
