@@ -161,7 +161,7 @@ button {
   background: linear-gradient(to left top, #9356dc, #ff79da);
   font-size: 1.6rem;
   font-weight: 500;
-  color: #ffffff;
+  color: #fff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1882352941);
   position: relative;
   z-index: 0;
@@ -252,25 +252,25 @@ button:hover::after {
   font-weight: 500;
 }
 
-.restaurants a {
+.restaurants_cards_container a {
   width: 100%;
-  max-width: 380px;
+  max-width: 360px;
   height: 65vw;
-  max-height: 266px;
+  max-height: 252px;
   border-radius: 15px;
-  overflow: hidden;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1882352941);
+  overflow: hidden;
 }
-.restaurants a .restaurant_card {
+.restaurants_cards_container a .restaurant_card {
   width: 100%;
   height: 100%;
   position: relative;
 }
-.restaurants a .restaurant_card img {
+.restaurants_cards_container a .restaurant_card img {
   height: 70%;
   object-fit: cover;
 }
-.restaurants a .restaurant_card figcaption {
+.restaurants_cards_container a .restaurant_card figcaption {
   width: 100%;
   height: 30%;
   display: flex;
@@ -279,19 +279,18 @@ button:hover::after {
   gap: 5%;
   padding: 5%;
   background-color: #fff;
-  position: relative;
 }
-.restaurants a .restaurant_card figcaption h3 {
+.restaurants_cards_container a .restaurant_card figcaption h3 {
   font-size: min(19.2px, 4.8vw);
   line-height: min(24px, 5.3vw);
   font-weight: 700;
 }
-.restaurants a .restaurant_card figcaption p {
+.restaurants_cards_container a .restaurant_card figcaption p {
   font-size: min(18px, 4.5vw);
   line-height: min(24px, 5.3vw);
   font-weight: 300;
 }
-.restaurants a .restaurant_card.flag_new::after {
+.restaurants_cards_container a .restaurant_card.flag_new::after {
   content: "Nouveau";
   width: min(84px, 21vw);
   height: min(30.8px, 7.7vw);
@@ -308,8 +307,9 @@ button:hover::after {
   color: #008766;
 }
 @media screen and (min-width: 1400px) {
-  .restaurants a .restaurant_card.hidden_card_desktop {
-    display: none;
+  .restaurants_cards_container a {
+    min-width: 360px;
+    min-height: 252px;
   }
 }
 
@@ -368,16 +368,16 @@ body > header i {
 }
 .cta .cta_content h2 {
   padding: 0px 15px;
+  font-size: clamp(2.8rem, 2.8vw, 4rem);
 }
 .cta .cta_content button {
-  width: auto;
-  min-width: 220px;
+  width: 220px;
   padding: 0 15px;
   margin: 15px 0;
 }
 
 .functionning {
-  padding: 45px 20px;
+  padding: 45px 20px 65px 20px;
 }
 .functionning h2 {
   margin-bottom: 30px;
@@ -400,36 +400,56 @@ body > header i {
     gap: 30px;
   }
 }
+@media screen and (min-width: 1400px) {
+  .functionning {
+    justify-content: flex-start;
+    padding-left: 190px;
+  }
+}
 
 .restaurants {
-  padding: 45px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 45px 20px 65px 20px;
   gap: 20px;
   background-color: #f6f6f6;
 }
 .restaurants h2 {
-  align-self: flex-start;
+  width: 100%;
+  max-width: 1030px;
+  align-self: center;
   margin-bottom: 10px;
 }
+.restaurants .restaurants_cards_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
 @media screen and (min-width: 750px) {
-  .restaurants {
+  .restaurants .restaurants_cards_container {
     display: grid;
     justify-content: center;
-    grid-template: 40px repeat(2, 1fr)/repeat(2, minmax(0, 380px));
-  }
-  .restaurants h2 {
-    grid-area: 1/1/2/3;
+    grid-template: repeat(2, 1fr)/repeat(2, minmax(0, 360px));
   }
 }
 @media screen and (min-width: 1400px) {
   .restaurants {
-    grid-template: 40px 1fr/repeat(3, 380px);
-    padding: 45px 0 45px 190px;
+    overflow: hidden;
+    padding: 45px 0 65px 180px;
   }
   .restaurants h2 {
-    grid-area: 1/1/2/5;
+    align-self: flex-start;
+    padding-left: 10px;
+  }
+  .restaurants .restaurants_cards_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 10px 0 10px 10px;
   }
 }
 
