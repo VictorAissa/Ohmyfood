@@ -11,10 +11,10 @@
         background-color: $colour_background;
         h2 {
             padding: 0px 15px;
+            font-size: clamp(2.8rem, 2.8vw, 4rem);
         }
         button {
-            width: auto;
-            min-width: 220px;
+            width: 220px;
             padding: 0 15px;
             margin: 15px 0;
         }

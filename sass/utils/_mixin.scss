@@ -1,5 +1,5 @@
 @mixin section_padding {
-    padding: 45px $mobile_section_side_padding;
+    padding: 45px $mobile_section_side_padding 65px $mobile_section_side_padding;
 }
 
 @mixin shadow {
@@ -31,7 +31,7 @@
 @mixin button_font {
     font-size: 1.6rem;
     font-weight: 500;
-    color: #ffffff;
+    color: #fff;
 }
 
 @mixin guideline_font {

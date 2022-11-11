@@ -19,4 +19,8 @@
             gap: 30px;
         }
     }
+    @media screen and (min-width: 1400px) {
+        justify-content: flex-start;
+        padding-left: 190px;
+    }
 }

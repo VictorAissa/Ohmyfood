@@ -138,7 +138,7 @@ button {
   background: linear-gradient(to left top, #9356dc, #ff79da);
   font-size: 1.6rem;
   font-weight: 500;
-  color: #ffffff;
+  color: #fff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1882352941);
   position: relative;
   z-index: 0;
@@ -166,12 +166,12 @@ button:hover::after {
   width: 100%;
   height: 70px;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: #fff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1882352941);
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-  animation: fade_in_top 0.5s cubic-bezier(0.4, 0.6, 0.6, 1) both;
+  animation: fade_in_top 0.5s cubic-bezier(0.4, 0.6, 0.6, 1) backwards;
 }
 .dish_delay_1 {
   animation-delay: 0.2s;
@@ -288,14 +288,15 @@ main .menu {
   align-items: center;
 }
 main .menu header {
+  height: 70px;
   width: min(1000px, 100%);
   border-radius: 40px 40px 0 0;
   transform: translateY(-50px);
-  padding: 40px 20px 0 20px;
+  padding: 0 20px;
   background-color: #f6f6f6;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 main .menu header h2 {
   font-family: shrikhand, sans-serif;
@@ -303,14 +304,17 @@ main .menu header h2 {
   font-weight: 400;
 }
 main .menu header i {
-  font-size: 28px;
+  font-size: 2.8rem;
   margin: 0 5%;
 }
 @media screen and (min-width: 750px) {
   main .menu header {
     justify-content: center;
-    height: 70px;
-    transform: translateY(-50px);
+  }
+}
+@media screen and (min-width: 1000px) {
+  main .menu header {
+    transform: translateY(-70px);
   }
 }
 main .menu form {
@@ -327,14 +331,14 @@ main .menu form .course {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  animation: fade_in_top 0.5s ease-out backwards;
+  animation: fade_in_top 0.5s cubic-bezier(0.4, 0.6, 0.6, 1) backwards;
 }
 main .menu form .course h3 {
   height: 25px;
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 28px;
-  margin-bottom: 18px;
+  margin-bottom: 10px;
 }
 main .menu form .course h3::after {
   content: "";

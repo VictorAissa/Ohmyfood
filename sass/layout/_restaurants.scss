@@ -1,27 +1,50 @@
 .restaurants {
-    @include section_padding;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include section_padding;
     gap: 20px;
     background-color: $colour_background;
     h2 {
-        align-self: flex-start;
+        width: 100%;
+        max-width: calc(1070px - (2 * $mobile_section_side_padding));
+        align-self: center;
         margin-bottom: 10px;
     }
-    @media screen and (min-width: 750px) {
-        display: grid;
-        justify-content: center;
-        grid-template: 40px repeat(2, 1fr) / repeat(2, minmax(0, 380px));
-        h2 {
-            grid-area: 1 / 1 / 2 / 3;
+    .restaurants_cards_container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        @media screen and (min-width: 750px) {
+            display: grid;
+            justify-content: center;
+            grid-template: repeat(2, 1fr) / repeat(
+                    2,
+                    minmax(
+                        0,
+                        calc(
+                            $max_device_width -
+                                (2 * $mobile_section_side_padding)
+                        )
+                    )
+                );
         }
     }
     @media screen and (min-width: 1400px) {
-        grid-template: 40px 1fr / repeat(3, 380px);
-        padding: 45px 0 45px 190px;
+        overflow: hidden;
+        padding: 45px 0 65px 180px;
         h2 {
-            grid-area: 1 / 1 / 2 / 5;
+            align-self: flex-start;
+            padding-left: 10px;
+        }
+        .restaurants_cards_container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 30px;
+            padding: 10px 0 10px 10px;
         }
     }
 }
